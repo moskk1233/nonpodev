@@ -91,3 +91,7 @@
 ::-webkit-scrollbar-thumb:hover {
 	background: rgba(157, 157, 157, 0.5);
 }
+.discord-widget {
+	display: flex;
+	justify-content: center;
+}
