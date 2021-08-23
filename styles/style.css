@@ -5,11 +5,11 @@
 	font-family: Prompt, sans-serif
 }
 
-.fab {
+.hover-icon {
 	transition: all .1s ease
 }
 
-.fab:hover {
+.hover-icon:hover {
 	transform: scale(1.3)
 }
 
