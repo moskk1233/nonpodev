@@ -6,11 +6,12 @@
 }
 
 .hover-icon {
-	transition: all .1s ease
+	transition: all 125ms ease;
 }
 
 .hover-icon:hover {
-	transform: scale(1.3)
+	transform: translate(0, -2.5px);
+	color: #bbb;
 }
 
 .nav-bar {
