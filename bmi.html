@@ -73,8 +73,13 @@
 
                 <!-- ปุ่มยินยัน BMI -->
                 <button type="button" class="btn btn-primary" data-toggle="modal" id="bmi-submit" onclick="BMICal()">
-                ยืนยัน
+                    <a href="#bmi-result" style="text-decoration: none; color: white;">ยืนยัน</a>
                 </button>
+            </div>
+            <div class="result-box">
+                <div class="mt-3" id="bmi-result">
+                    <p id="bmi-result-text"></p>
+                </div>
             </div>
             <hr class="mb-4">
             <div class="alert alert-success">
@@ -142,8 +147,13 @@
             <div class="d-flex justify-content-center">
                 <!-- ปุ่มยืนยัน BMR -->
                 <button type="button" class="btn btn-primary" data-toggle="modal" id="bmr-submit" onclick="BMRProgram()">
-                ยืนยัน
+                <a href="#bmr-result" style="text-decoration: none; color: white;">ยืนยัน</a>
                 </button>
+            </div>
+            <div class="result-box">
+                <div class="mt-3" id="bmr-result">
+                    <p id="bmr-result-text"></p>
+                </div>
             </div>
             </div>
         </div>

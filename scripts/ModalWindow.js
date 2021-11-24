@@ -38,7 +38,6 @@ const ModalWindow = {
         const modalOverlay = closeButton.parentElement.parentElement.parentElement;
         document.body.removeChild(modalOverlay);
         document.body.style.overflow = "auto";
-
     }
 };
 document.addEventListener("DOMContentLoaded", () => ModalWindow.init());

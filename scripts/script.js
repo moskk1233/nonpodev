@@ -1,20 +1,82 @@
 let height = document.getElementById("height"),
 	weight = document.getElementById("weight");
+	bmi_result = document.getElementById("bmi-result-text");
 function BMICal() {
 	let e = weight.value / (height.value / 100) ** 2;
-	weight.value && height.value > 0 && (e < 18.5 ? alert("ค่า BMI ของคุณคือ " + e.toFixed(2) + " คุณอยู่ในระดับผอม") : e >= 18.5 && e <= 22.9 ? alert("ค่า BMI ของคุณคือ " + e.toFixed(2) + " คุณอยู่ในระดับปกติ") : e >= 23 && e <= 24.9 ? alert("ค่า BMI ของคุณคือ " + e.toFixed(2) + " คุณอยู่ในระดับท้วม") : e >= 25 && e <= 29.9 ? alert("ค่า BMI ของคุณคือ " + e.toFixed(2) + " คุณอยู่ในระดับอ้วน") : e >= 30 && alert("ค่า BMI ของคุณคือ " + e.toFixed(2) + " คุณอยู่ในระดับอ้วนมาก"))
+	if (height.value && height.value > 0) {
+		if (e < 18.5) {
+			document.getElementsByClassName("result-box")[0].style.display = "flex";
+			bmi_result.innerHTML = "ค่า BMI ของคุณคือ " + e.toFixed(2) + " มีค่าเป็นผอม";
+		}
+		else if (e > 18.5, e < 22.9) {
+			document.getElementsByClassName("result-box")[0].style.display = "flex";
+			bmi_result.innerHTML = "ค่า BMI ของคุณคือ " + e.toFixed(2) + " มีค่าเป็นปกติ";
+		}
+		else if (e > 23, e < 24.9) {
+			document.getElementsByClassName("result-box")[0].style.display = "flex";
+			bmi_result.innerHTML = "ค่า BMI ของคุณคือ " + e.toFixed(2) + " มีค่าเป็นท้วม";
+		}
+		else if (e > 25, e < 29.9) {
+			document.getElementsByClassName("result-box")[0].style.display = "flex";
+			bmi_result.innerHTML = "ค่า BMI ของคุณคือ " + e.toFixed(2) + " มีค่าเป็นอ้วน";
+		}
+		else if (e > 30) {
+			document.getElementsByClassName("result-box")[0].style.display = "flex";
+			bmi_result.innerHTML = "ค่า BMI ของคุณคือ " + e.toFixed(2) + " มีค่าเป็นอ้วนมาก";
+		}
+	}
 }
 let bmr_height = document.getElementById("bmr-height"),
 	bmr_weight = document.getElementById("bmr-weight"),
 	bmr_age = document.getElementById("bmr-age"),
-	exercise = document.getElementById("bmr-exercise");
+	exercise = document.getElementById("bmr-exercise"),
+	bmr_result = document.getElementById("bmr-result-text");
+
 function BMRCalmen() {
 	let e = 88.362 + 13.397 * bmr_weight.value + 4.799 * bmr_height.value - 5.677 * bmr_age.value;
-	1 == exercise.value ? alert("ค่า BMR ของคุณคือ " + Math.floor(1.2 * e) + " กิโลแคลอรี่") : 2 == exercise.value ? alert("ค่า BMR ของคุณคือ " + Math.floor(1.375 * e) + " กิโลแคลอรี่") : 3 == exercise.value ? alert("ค่า BMR ของคุณคือ " + Math.floor(1.55 * e) + " กิโลแคลอรี่") : 4 == exercise.value ? alert("ค่า BMR ของคุณคือ " + Math.floor(1.725 * e) + " กิโลแคลอรี่") : 5 == exercise.value && alert("ค่า BMR ของคุณคือ " + Math.floor(1.9 * e) + " กิโลแคลอรี่")
+	if (exercise.value == 1) {
+		document.getElementsByClassName("result-box")[1].style.display = "flex";
+		bmr_result.innerHTML = "ค่า BMR ของคุณคือ " + Math.floor(1.2 * e) + " กิโลแคลอรี่";
+	}
+	else if (exercise.value == 2) {
+		document.getElementsByClassName("result-box")[1].style.display = "flex";
+		bmr_result.innerHTML = "ค่า BMR ของคุณคือ " + Math.floor(1.375 * e) + " กิโลแคลอรี่";
+	}
+	else if (exercise.value == 3) {
+		document.getElementsByClassName("result-box")[1].style.display = "flex";
+		bmr_result.innerHTML = "ค่า BMR ของคุณคือ " + Math.floor(1.55 * e) + " กิโลแคลอรี่";
+	}
+	else if (exercise.value == 4) {
+		document.getElementsByClassName("result-box")[1].style.display = "flex";
+		bmr_result.innerHTML = "ค่า BMR ของคุณคือ " + Math.floor(1.725 * e) + " กิโลแคลอรี่";
+	}
+	else if (exercise.value == 5) {
+		document.getElementsByClassName("result-box")[1].style.display = "flex";
+		bmr_result.innerHTML = "ค่า BMR ของคุณคือ " + Math.floor(1.9 * e) + " กิโลแคลอรี่";
+	}
 }
 function BMRCalWomen() {
 	let e = 447.593 + 9.247 * bmr_weight.value + 3.098 * bmr_height.value - 4.33 * bmr_age.value;
-	1 == exercise.value ? alert("ค่า BMR ของคุณคือ " + Math.floor(1.2 * e) + " กิโลแคลอรี่") : 2 == exercise.value ? alert("ค่า BMR ของคุณคือ " + Math.floor(1.375 * e) + " กิโลแคลอรี่") : 3 == exercise.value ? alert("ค่า BMR ของคุณคือ " + Math.floor(1.55 * e) + " กิโลแคลอรี่") : 4 == exercise.value ? alert("ค่า BMR ของคุณคือ " + Math.floor(1.725 * e) + " กิโลแคลอรี่") : 5 == exercise.value && alert("ค่า BMR ของคุณคือ " + Math.floor(1.9 * e) + " กิโลแคลอรี่")
+	if (exercise.value == 1) {
+		document.getElementsByClassName("result-box")[1].style.display = "flex";
+		bmr_result.innerHTML = "ค่า BMR ของคุณคือ " + Math.floor(1.2 * e) + " กิโลแคลอรี่";
+	}
+	else if (exercise.value == 2) {
+		document.getElementsByClassName("result-box")[1].style.display = "flex";
+		bmr_result.innerHTML = "ค่า BMR ของคุณคือ " + Math.floor(1.375 * e) + " กิโลแคลอรี่";
+	}
+	else if (exercise.value == 3) {
+		document.getElementsByClassName("result-box")[1].style.display = "flex";
+		bmr_result.innerHTML = "ค่า BMR ของคุณคือ " + Math.floor(1.55 * e) + " กิโลแคลอรี่";
+	}
+	else if (exercise.value == 4) {
+		document.getElementsByClassName("result-box")[1].style.display = "flex";
+		bmr_result.innerHTML = "ค่า BMR ของคุณคือ " + Math.floor(1.725 * e) + " กิโลแคลอรี่";
+	}
+	else if (exercise.value == 5) {
+		document.getElementsByClassName("result-box")[1].style.display = "flex";
+		bmr_result.innerHTML = "ค่า BMR ของคุณคือ " + Math.floor(1.9 * e) + " กิโลแคลอรี่";
+	}
 }
 function BMRProgram() {
 	let e = document.getElementById("female"),
