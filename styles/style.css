@@ -32,7 +32,7 @@ html {
 }
 
 .about-me {
-	border-radius: 20px;
+	border-radius: 0.25rem;
 	padding: 2rem;
 	background-color: #fff;
 	padding-left: 0;
