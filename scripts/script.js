@@ -85,10 +85,6 @@ function BMRProgram() {
 }
 
 $(document).ready(function(){
-	$('.discontextmenu').on('contextmenu', function() {
-		Alert();
-		return false;
-	});
 	$('.disdrag').on('dragstart', function() {
 		return false;
 	});
