@@ -1,11 +1,8 @@
-# Welcome to Nonpo Website !!
-Hello, Welcome to my website project I hope you all will have a happy to my site  
+# ยินดีต้อนรับสู่เว็บไซต์ NonPo !!
+สวัสดีครับยินดีต้อนรับทุกคนเข้าสู่เว็บไซต์ของผมนี่เป็นเว็บไซต์แรกของผมเลยหากผิดพลาดประการใดผมต้องขออภัยทุกท่านด้วยครับ
 
 
-**Thank you to visited !!**
+**ขอบคุณที่มาเยี่ยมชมครับ !!**
 
-## Contributor
-Nonpawit Pothinil (Website Owner)
-
-## License
-Nonpo is under [MIT License](LICENSE)
+## ลิขสิทธิ์
+[NonPo](https://moskk1233.github.io/nonpodev/) อยู่ภายใต้ลิขสิทธิ์ [MIT License](LICENSE)
